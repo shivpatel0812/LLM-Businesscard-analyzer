@@ -1,0 +1,20 @@
+{
+    "Company": "Johns Hopkins University Applied Physics Laboratory",
+    "Person": {
+        "Name": "Jack M. Sheppard",
+        "Title": "Systems Engineer",
+        "Department": "Air & Missile Defense Department",
+        "Contact": {
+            "Office": "240-228-5450",
+            "Fax": "240-228-5967",
+            "Cell": "301-395-2894",
+            "Email": "jack.sheppard@jhuapl.edu"
+        },
+        "Address": {
+            "Street": "11100 Johns Hopkins Road",
+            "City": "Laurel",
+            "State": "MD",
+            "ZipCode": "20723-6099"
+        }
+    }
+}
