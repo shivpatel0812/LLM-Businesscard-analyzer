@@ -2,21 +2,21 @@
     "invoice": {
         "title": "INVOICE",
         "number": "123456",
-        "date": "08/19/2020",
+        "invoice_date": "08/19/2020",
         "due_date": "09/19/2020",
-        "from": {
+        "seller": {
             "business_name": "Example Business Name or Business Owner",
             "address": "123 Example Business Address",
             "city": "Boston",
             "state": "MA",
-            "zip": "02135"
+            "zip_code": "02135"
         },
-        "to": {
+        "buyer": {
             "customer_name": "Example Customer Name",
             "address": "456 Example Customer Address",
             "city": "Boston",
             "state": "MA",
-            "zip": "02135"
+            "zip_code": "02135"
         },
         "items": [
             {
@@ -42,9 +42,11 @@
             }
         ],
         "notes": "Provide a concise, professional description of the services, product, and discount listed above.",
-        "subtotal": 600.0,
-        "total": 500.0,
-        "amount_paid": 0.0,
-        "balance_due": 500.0
+        "summary": {
+            "subtotal": 600.0,
+            "total": 500.0,
+            "amount_paid": 0.0,
+            "balance_due": 500.0
+        }
     }
 }
