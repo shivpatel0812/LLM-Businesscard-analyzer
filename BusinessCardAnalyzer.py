@@ -105,9 +105,23 @@ if response.status_code == 200:
     linkedin_profile_data = response.json()
 
     # Print the fetched LinkedIn profile data
-    print(json.dumps(linkedin_profile_data, indent=4))
+    #print(json.dumps(linkedin_profile_data, indent=4))
 
-    # Save the LinkedIn profile data to a file
+    gpt_response = openai.ChatCompletion.create(
+        model='gpt-4-vision-preview',
+        messages=[
+            {
+                "role": "user",
+                "content": f"Please provide a detailed summary of the following LinkedIn profile data:\n\n{json.dumps(linkedin_profile_data, indent=4)}"
+            }
+        ],
+        max_tokens=500,
+    )
+
+    # Extract the response content from GPT-4
+    gpt_response_content = gpt_response.choices[0].message['content']
+    print(gpt_response_content)
+
     '''
     linkedin_profile_file_path = os.path.join(output_directory, 'linkedin_profile.json')
     with open(linkedin_profile_file_path, 'w') as file:
